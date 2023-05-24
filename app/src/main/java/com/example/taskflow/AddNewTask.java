@@ -1,5 +1,7 @@
 package com.example.taskflow;
 
+import android.app.Activity;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
@@ -13,6 +15,7 @@ import android.widget.EditText;
 
 import androidx.core.content.ContextCompat;
 
+import com.example.taskflow.Model.ToDoModel;
 import com.example.taskflow.Utils.DatabaseHandler;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
@@ -66,13 +69,13 @@ public class AddNewTask extends BottomSheetDialogFragment {
                 }
 
                 @Override
-                public void onTextChanged(CharSequence s, int start, int before, int count) {
-                    if(s.toString().equals("")) {
+                public void onTextChanged(CharSequence text, int start, int before, int count) {
+                    if(text.toString().equals("")) {
                         newTaskSaveButton.setEnabled(false);
                         newTaskSaveButton.setTextColor(Color.GRAY);
                     } else{
                         newTaskSaveButton.setEnabled(true);
-                        newTaskSaveButton.setTextColor(ContextCompat.getColor(getContext(), R.color.purple_500);
+                        newTaskSaveButton.setTextColor(ContextCompat.getColor(getContext(), R.color.purple_500));
                     }
                 }
 
@@ -81,13 +84,30 @@ public class AddNewTask extends BottomSheetDialogFragment {
                 }
             });
 
+            boolean finalIsUpdate = isUpdate;
             newTaskSaveButton.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v){
-
+                    String text = newTaskText.getText().toString();
+                    if(finalIsUpdate) {
+                        db.updateTask(bundle.getInt("id"), text);
+                    } else {
+                        ToDoModel task = new ToDoModel();
+                        task.setTask(text);
+                        task.setStatus(0);
+                    }
+                    dismiss();
                 }
-            }
+            });
 
+        }
+    }
+
+    @Override
+    public void onDismiss(DialogInterface dialog) {
+        Activity activity = new Activity();
+        if (activity instanceof DialogCloseListener) {
+            ((DialogCloseListener)activity).handleDialogClose(dialog);
         }
     }
 }
