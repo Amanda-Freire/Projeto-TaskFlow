@@ -51,5 +51,9 @@ Esse projeto foi construído no AndroidStudio, utilizando a linguagem Java.
 ![Tarefa editada e marcada como concluída](https://i.imgur.com/CvcPntP.jpg)
 
 
+## Projeto referência
+- [Do-It](https://github.com/msindev/Do-It)
+
+
 ## Autor
 - [Amanda Freire Oliveira](https://github.com/Amanda-Freire)
