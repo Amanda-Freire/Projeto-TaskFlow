@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- layout da tela inicial -->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -16,6 +19,9 @@
         android:layout_marginTop="16dp"
         android:textSize="32sp"/>
 
+    <!-- importado em Gradle Scripts/build.gradle(Module:app)-->
+
+    <!-- layoutManager é necessário para definir o layout em grid ou linear -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/tasksRecyclerView"
         android:layout_width="match_parent"
@@ -24,6 +30,8 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:nestedScrollingEnabled="true"/>
 
+    <!-- importado em Gradle Scripts/build.gradle(Module:app)-->
+    <!-- após importar, necessário sincronizar -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"

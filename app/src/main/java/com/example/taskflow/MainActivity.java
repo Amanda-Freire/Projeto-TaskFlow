@@ -33,11 +33,13 @@ public class MainActivity extends AppCompatActivity implements DialogCloseListen
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
 
+        // inicializando o banco de dados
         db = new DatabaseHandler(this);
         db.openDatabase();
 
         taskList = new ArrayList<>();
 
+        // inicializando a recyclerView da tela de tarefas
         tasksRecyclerView = findViewById(R.id.tasksRecyclerView);
         tasksRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
