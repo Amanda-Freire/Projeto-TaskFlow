@@ -15,26 +15,41 @@ Esse projeto foi construído no AndroidStudio, utilizando a linguagem Java.
 ## Screenshots
 
 - Tela inicial
+
 ![Tela inicial](https://i.imgur.com/4YeQpgC.jpg)
 
+
 - Adição de tarefa
+
 ![Adição de tarefa](https://i.imgur.com/8wqIWXy.jpg)
 
+
 - Tarefa adicionada
+
 ![Tarefa adicionada](https://i.imgur.com/kow0l5s.jpg)
 
+
 - Exclusão de tarefa
+
 ![Exclusão de tarefa](https://i.imgur.com/z5NTHqe.jpg)
 
+
 - Confirmação de exclusão
+
 ![Confirmação de exclusão](https://i.imgur.com/Ooqoe8d.jpg)
 
+
 - Edição de tarefa
+
 ![Edição de tarefa](https://i.imgur.com/hNdC3R8.jpg)
+
 ![Edição de tarefa](https://i.imgur.com/lWXYgKZ.jpg)
 
+
 - Tarefa editada
+
 ![Tarefa editada e marcada como concluída](https://i.imgur.com/CvcPntP.jpg)
+
 
 ## Autor
 - [Amanda Freire Oliveira](https://github.com/Amanda-Freire)
